@@ -37,3 +37,8 @@
     background-color: transparent;
     color: #f3f3f3;
 }
+
+.main-custom-nav .icon-bar {
+    color: white;
+    background-color: white;
+}
