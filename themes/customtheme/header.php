@@ -16,7 +16,8 @@
         <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
         <?php wp_head(); ?>
     </head>
-    <body>
+    <!-- This allows us to use things like CSS to make page-specific style changes for total control over our site's look -->
+    <body <?php body_class(); ?>>
         <nav class="navbar gradient-bg main-custom-nav">
             <div class="container">
                 <div class="navbar-header">

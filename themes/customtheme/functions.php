@@ -23,4 +23,18 @@ function customtheme_setup() {
 }
 add_action( 'after_setup_theme', 'customtheme_setup' );
 
+// register our sidebar (it's a widget and can be used for text, etc.)
+function customtheme_widgets() {
+    register_sidebar( array(
+        'name'          => __('Sidebar', 'customtheme' ),
+        'id'            => 'sidebar-1',
+        'description'   => __('Add widgets here to appear in the sidebar', 'customtheme'),
+        'before widget' => 'section id="%1$s" class="widget %2$s">',
+        'after widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after-title'   => '</h2>'
+    ) );
+}
+add_action( 'widgets_init', 'customtheme_widgets' );
+
 ?>
