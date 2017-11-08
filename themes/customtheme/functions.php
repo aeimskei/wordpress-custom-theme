@@ -27,13 +27,13 @@ add_action( 'after_setup_theme', 'customtheme_setup' );
 // this makes WordPress aware that we want sidebar functionality
 function customtheme_widgets() {
     register_sidebar( array(
-        'name'          => __('Sidebar', 'customtheme' ),
+        'name'          => __( 'Sidebar', 'customtheme' ),
         'id'            => 'sidebar-1',
-        'description'   => __('Add widgets here to appear in the sidebar', 'customtheme'),
-        'before widget' => 'section id="%1$s" class="widget %2$s">',
-        'after widget'  => '</section>',
+        'description'   => __( 'Add widgets here to appear in the sidebar', 'customtheme' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
         'before_title'  => '<h2 class="widget-title">',
-        'after-title'   => '</h2>'
+        'after_title'   => '</h2>'
     ) );
 }
 add_action( 'widgets_init', 'customtheme_widgets' );
