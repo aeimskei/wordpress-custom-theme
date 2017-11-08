@@ -24,6 +24,7 @@ function customtheme_setup() {
 add_action( 'after_setup_theme', 'customtheme_setup' );
 
 // register our sidebar (it's a widget and can be used for text, etc.)
+// this makes WordPress aware that we want sidebar functionality
 function customtheme_widgets() {
     register_sidebar( array(
         'name'          => __('Sidebar', 'customtheme' ),

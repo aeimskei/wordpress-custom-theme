@@ -23,6 +23,12 @@
             <?php the_content(); ?>
         <?php endwhile; ?>
     <?php endif; ?>
+    
+    <?php if (is_active_sidebar( 'sidebar-1') ) : ?>
+        <!-- aside is actually an HTML tag, class helps us target via CSS -->
+        <aside id="secondary" class="sidebar widget-area" role="complementary">
+            <?php dynamic_sidebar( 'sidebar-1'); ?>
+        </aside>
+    <?php endif; ?>
 </div>
-        
 <?php get_footer(); ?>
