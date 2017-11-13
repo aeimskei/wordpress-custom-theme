@@ -25,6 +25,14 @@ body {
     color: white;
 }
 
+h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+}
+
 /* navigation styles */
 .margin-neg-20 {
     margin-top: -20px;
