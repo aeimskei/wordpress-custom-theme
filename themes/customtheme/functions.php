@@ -6,6 +6,8 @@ function enqueue_customtheme_styles() {
     wp_enqueue_script('bootstrap-js', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array('jquery'));
     // this line of code gives us access to the Twitter Boostrap library
     wp_enqueue_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css');
+    // google-fonts
+    wp_enqueue_style('googlefont', '//fonts.googleapis.com/css?family=Montserrat:400,700');
     //this line of code loads in the "style.css" file
     wp_enqueue_style('customtheme-style', get_stylesheet_uri() );
 }
@@ -39,11 +41,10 @@ function customtheme_widgets() {
 add_action( 'widgets_init', 'customtheme_widgets' );
 
 // register our shortcode
-function custom_shortcode( $atts , $content = null ) {
-    return '<div class="col-sm-4">' . $content . '</div>';
-}
+    function custom_shortcode( $atts , $content = null ) {
+        return '<div class="col-sm-4">' . $content . '</div>';
+    }
 add_shortcode( 'one_third', 'custom_shortcode');
-
 // remove_filter( 'the_content', 'wpautop' );
 
 ?>
