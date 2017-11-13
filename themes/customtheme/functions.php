@@ -38,4 +38,12 @@ function customtheme_widgets() {
 }
 add_action( 'widgets_init', 'customtheme_widgets' );
 
+// register our shortcode
+function custom_shortcode( $atts , $content = null ) {
+    return '<div class="col-sm-4">' . $content . '</div>';
+}
+add_shortcode( 'one_third', 'custom_shortcode');
+
+// remove_filter( 'the_content', 'wpautop' );
+
 ?>
